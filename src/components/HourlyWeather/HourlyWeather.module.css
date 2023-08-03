@@ -1,0 +1,53 @@
+.boxTwo_hh {
+  height: 140px;
+  width: 900px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(40, 40, 40);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  padding-bottom: 0.2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+}
+.hhCards {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 9px;
+}
+.hhCard {
+  background-color: rgb(60, 59, 59);
+  width: 76px;
+  border-radius: 0.3rem;
+  padding: 12px;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.hhCardTime {
+  margin: 0;
+  font-size: 14px;
+}
+.hhCardImg {
+  margin: 0;
+}
+.hhCardImg img {
+  height: 32px;
+}
+.hhCardTemp {
+  margin: 0;
+  font-size: 14px;
+}
+
+.hh_heading {
+  color: rgb(191, 189, 189);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 4px;
+  background-color: rgb(40, 40, 40);
+}

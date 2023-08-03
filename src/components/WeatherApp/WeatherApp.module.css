@@ -1,0 +1,36 @@
+.locationBtn{
+    border: none;
+    background-color: rgba(223, 160, 234, 0.831);
+    border-radius: .3rem;
+    color: rgb(0, 0, 0);
+    padding: 0 .6rem;
+    text-align: center;
+    padding-bottom: .2rem;
+}
+
+.appLogo{
+    font-size: 1.2rem;
+}
+
+.logoName{
+    color: skyblue;
+}
+.searchContainer{
+    position: relative;
+}
+.searchIcon{
+    position: absolute;
+    left: .6rem;
+    top: .1rem;
+}
+
+
+.inputBox{
+    background-color: rgb(54, 52, 52);
+    border: none;
+    border-radius: 1rem;
+    color: whitesmoke;
+    outline: none;
+    padding:  .2rem 0 .2rem 2rem ;
+}
+
