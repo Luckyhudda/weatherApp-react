@@ -16,6 +16,7 @@ const WeatherApp = () => {
   const [isError, setIsError] = useState(false);
   const [currentCity, setCurrentCity] = useState(false);
 
+ const time = getTime()
   useEffect(() => {
     setIsFetching(true);
     navigator.geolocation.getCurrentPosition(
@@ -32,9 +33,7 @@ const WeatherApp = () => {
                 setIsError(true);
                 console.log(error);
               });
-            getTime(data.location.name).then((data) => {
-              setTimezone(data);
-            });
+           setTimezone(time);
           }
         );
       },
@@ -49,13 +48,11 @@ const WeatherApp = () => {
             setIsError(true);
             console.log(error);
           });
-        getTime("new delhi").then((data) => {
-          setTimezone(data);
-        });
+       setTimezone(time)
         console.log(error);
       }
     );
-  }, []);
+  }, [time]);
 
   const getWeatherInfo = () => {
     setCurrentCity(false);
@@ -78,9 +75,7 @@ const WeatherApp = () => {
         setIsError(true);
         console.log(error);
       });
-    getTime(city).then((data) => {
-      setTimezone(data);
-    });
+   setTimezone(time);
   };
 
   const onchangeHandler = (e) => {

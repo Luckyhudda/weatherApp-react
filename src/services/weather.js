@@ -23,39 +23,9 @@ export async function getData(cityName) {
     return "Error";
   }
 }
-let currentDate;
-export const getTime = (cityName) => {
-  return getData(cityName).then((day) => {
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    currentDate = day?.location?.localtime;
-    const date = new Date(currentDate);
-    let currentday = date.getDay();
-    let currentdate = date.getDate();
-    let currentTime = date.getMonth();
-    let today = days[currentday];
-    let month = months[currentTime];
-    return { today, month, currentdate };
-  });
+export const getTime = () => {
+  const currentDate = new Date();
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const formattedDate = currentDate.toLocaleDateString(undefined, options);
+  return formattedDate;
 };

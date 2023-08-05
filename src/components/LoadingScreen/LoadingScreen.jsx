@@ -4,6 +4,7 @@ import loaderImage from "../../assets/loaderImage.png";
 
 const LoadingScreen = ({ message }) => {
   return (
+    
     <div className="container-fluid h-100">
       <div className="row h-100 justify-content-center align-items-center">
         <div

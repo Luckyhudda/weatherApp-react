@@ -4,7 +4,7 @@ import { SlCalender } from "react-icons/sl";
 import { ImLocation2 } from "react-icons/im";
 const CurrentWeatherUI = ({ currentData, currentTime }) => {
   const final = { ...currentData };
-  const { today, month, currentdate } = currentTime;
+  // const { today, month, currentdate } = currentTime;
   const currentValue = { ...final.current };
   const locationValue = { ...final.location };
   const forecastValue = [...final.forecast.forecastday];
@@ -43,7 +43,7 @@ const CurrentWeatherUI = ({ currentData, currentTime }) => {
             <span className={styles.calIcon}>
               <SlCalender />{" "}
             </span>
-            {today} {currentdate}, {month}
+            {currentTime}
           </p>
           <p>
             <span className={styles.calIcon}>
